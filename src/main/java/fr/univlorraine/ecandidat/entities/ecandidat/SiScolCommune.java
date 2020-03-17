@@ -90,6 +90,15 @@ public class SiScolCommune implements Serializable {
 		this.temEnSveCom = temEnSveCom;
 	}
 
+// BRICE pour codDep depuis SiScolCocktail
+	public SiScolCommune(final String codCom, final String libCom, final Boolean temEnSveCom, final String codDep) {
+		super();
+		this.codCom = codCom;
+		this.libCom = libCom;
+		this.temEnSveCom = temEnSveCom;
+		this.siScolDepartement = new SiScolDepartement(codDep);
+	}
+
 	public SiScolCommune(final String codCom) {
 		super();
 		this.codCom = codCom;

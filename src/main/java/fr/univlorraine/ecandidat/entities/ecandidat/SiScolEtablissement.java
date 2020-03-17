@@ -105,4 +105,18 @@ public class SiScolEtablissement implements Serializable {
 		this.temEnSveEtb = temEnSveEtb;
 	}
 
+	// BRICE pour cod_dep not null
+        public SiScolEtablissement(final String codEtb, final String codTpeEtb, final String libEtb, final String libWebEtb,
+                        final String licEtb, final Boolean temEnSveEtb, final String codDep) {
+                super();
+                this.codEtb = codEtb;
+                this.codTpeEtb = codTpeEtb;
+                this.libEtb = libEtb;
+                this.libWebEtb = libWebEtb;
+                this.licEtb = licEtb;
+                this.temEnSveEtb = temEnSveEtb;
+		this.siScolDepartement = new SiScolDepartement(codDep,"","",Boolean.TRUE);
+        }
+
+
 }
